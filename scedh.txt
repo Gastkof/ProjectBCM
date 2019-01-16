@@ -1,0 +1,57 @@
+Managers
+
+Bar Amit 305341950
+
+Gaston Kofmansky 310617337
+
+benny kobi 124599882
+Moshe Zuchmir 123456789
+
+Mariana Bitar 222333555
+
+Movies
+
+TITLE Star Wars GENERS Fantasy 120 20.0 22.0 4.5 1 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+TITLE Lord of The Rings GENERS Fantasy 120 20.0 22.0 4.5 2 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+TITLE Harry Potter GENERS Fantasy 120 20.0 22.0 4.5 3 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+TITLE Fight Club GENERS Fantasy 120 20.0 22.0 4.5 4 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+TITLE Se7en GENERS Fantasy 120 20.0 22.0 4.5 5 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+TITLE Pulp Fiction GENERS Fantasy 120 20.0 22.0 4.5 6 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+TITLE Avengers GENERS Fantasy 120 20.0 22.0 4.5 7 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+TITLE Memento GENERS Fantasy 120 19.0 21.0 4.5 3 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+TITLE Blade Runner GENERS Fantasy 120 14.0 16.0 4.5 4 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+TITLE Hitchikers guide to the Galaxy GENERS Fantasy 120 20.0 22.0 4.5 3 Harrison Ford,Carrie Fisher SUBTITLE Hebrew English
+
+News
+TITLE Morning news GENERS Political 90  6.5 8.0  3  scarpi coco
+TITLE Noon news GENERS Political 90  6.5 8.0  4 7 boni' cosd1o
+TITLE Evening news GENERS Political 60  19.0 20.0  3 dani busink
+Series
+TITLE Friends GENERS Comedy Drama 30 23.0 23.50 1 null 3 Sunday Monday Wednesday
+TITLE Family Guy GENERS Comedy Drama 30 10.0 10.50 1 null 3 Sunday Monday Wednesday
+TITLE Game of Thrones GENERS Comedy Drama 40 23.20 24.0 1 null 3 Sunday Monday Wednesday
+TITLE Breaking Bad GENERS Comedy Drama 30 13.0 13.50 1 null 3 Sunday Monday Wednesday
+TITLE Cosmos GENERS Comedy Drama 60 16.0 17.0 1 null 3 Sunday Monday Wednesday
+TITLE Rick & Morty GENERS Comedy Drama 20 18.0 18.20 1 null 3 Sunday Monday Wednesday
+TITLE The Sopranos GENERS Comedy Drama 60 21.0 22.0 1 null 3 Sunday Monday Wednesday
+TvShows
+TITLE Conan O'Brien GENERS Social Comedy  60  17.0 18.0  4 2 bar refali, Host guy pines 
+TITLE Ellen DeGeneres GENERS Social Adventure  60  17.0 18.0  1 2 bar refali, Host guy pines
+TITLE Jimmy Kimmel GENERS Social Adventure  60  17.0 18.0  4 3 bar refali, Host guy pines
+TITLE David Letterman GENERS Social Adventure  60  17.0 18.0  1 4 bar refali, Host guy pines
+TITLE Colbert GENERS Social Adventure  60  17.0 18.0  4 5 bar refali, Host guy pines
+TITLE Jon Stewart GENERS Social Adventure  60  17.0 18.0  3 6 bar refali, Host guy pines
+TITLE Johnny Carson GENERS Social Adventure  60  17.0 18.0  3 7 bar refali, Host guy pines
+TITLE Jimmy Fallon GENERS Social Adventure  60  19.0 20.0  1 1 bar refali, Host guy pines
+TITLE James Corden GENERS Social Adventure  60  19.0 20.0  4 2 bar refali, Host guy pines
+TITLE John Oliver GENERS Social Adventure  60  17.0 18.0  3 1 bar refali, Host guy pines
+END
