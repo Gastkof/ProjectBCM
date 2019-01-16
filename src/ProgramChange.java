@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Frame;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -31,6 +32,8 @@ import javax.swing.event.CaretEvent;
 import java.awt.event.InputMethodListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.awt.event.InputMethodEvent;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTabbedPane;
@@ -58,6 +61,8 @@ import java.awt.Insets;
 import java.awt.Component;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 public class ProgramChange extends JFrame {
 
@@ -106,6 +111,7 @@ public class ProgramChange extends JFrame {
 	public ProgramChange() throws ProgramException, UnavailableSpotException {
 		//BCM.Menu(8);
 		//		AddManager.managers =  Arrays.asList(BCM.managers);
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 840, 720);
 		contentPane = new JPanel();
@@ -510,32 +516,32 @@ public class ProgramChange extends JFrame {
 		UpdateProgram.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Pick Day");
-		lblNewLabel.setBounds(125, 6, 151, 27);
+		lblNewLabel.setBounds(185, 6, 151, 27);
 		UpdateProgram.add(lblNewLabel);
 
 		JLabel lblPickProgramType = new JLabel("Pick Program Type");
-		lblPickProgramType.setBounds(331, 6, 145, 27);
+		lblPickProgramType.setBounds(351, 6, 145, 27);
 		UpdateProgram.add(lblPickProgramType);
 
 		dayComboBox = new JComboBox();
-		dayComboBox.setBounds(125, 28, 151, 27);
+		dayComboBox.setBounds(185, 28, 151, 27);
 		DefaultComboBoxModel<DaysOfTheWeek> updateDays = new DefaultComboBoxModel<>(DaysOfTheWeek.values());
 
 		JLabel lblPick = new JLabel("Pick");
-		lblPick.setBounds(531, 6, 150, 27);
+		lblPick.setBounds(556, 6, 150, 27);
 		UpdateProgram.add(lblPick);
 		dayComboBox.setModel(updateDays);
 		UpdateProgram.add(dayComboBox);
 
 		programTypeCombo = new JComboBox();
-		programTypeCombo.setBounds(331, 28, 145, 27);
+		programTypeCombo.setBounds(351, 28, 145, 27);
 
 		DefaultComboBoxModel<String> typeModel = new DefaultComboBoxModel<>(new String[] {"Movies", "News", "Series", "TV Show"});
 		programTypeCombo.setModel(typeModel);
 		UpdateProgram.add(programTypeCombo);
 
 		programCombo = new JComboBox();
-		programCombo.setBounds(531, 28, 150, 27);
+		programCombo.setBounds(556, 28, 150, 27);
 		DefaultComboBoxModel<Program> programModel = null;
 		UpdateProgram.add(programCombo);
 
@@ -1033,15 +1039,15 @@ public class ProgramChange extends JFrame {
 		DeleteProgram.setLayout(null);
 
 		JLabel label_2 = new JLabel("Pick Day");
-		label_2.setBounds(56, 0, 54, 16);
+		label_2.setBounds(56, 0, 100, 16);
 		DeleteProgram.add(label_2);
 
 		JLabel label_3 = new JLabel("Pick Program Type");
-		label_3.setBounds(262, 0, 116, 16);
+		label_3.setBounds(262, 0, 145, 16);
 		DeleteProgram.add(label_3);
 
 		JLabel label_4 = new JLabel("Pick");
-		label_4.setBounds(462, 0, 26, 16);
+		label_4.setBounds(462, 0, 108, 16);
 		DeleteProgram.add(label_4);
 
 		deleteDaysComboBox = new JComboBox();
@@ -1064,7 +1070,29 @@ public class ProgramChange extends JFrame {
 		deleteProgramButton.setBounds(264, 151, 140, 57);
 
 		AddProgram.add(btnSchedule);
+		
+		JMenuItem mntmMangerPage = new JMenuItem("Manger page");
+		mntmMangerPage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MangerPage mangerPage = new MangerPage();
+				mangerPage.setVisible(true);
+				dispose();
+			}
+		});
+		mntmMangerPage.setBounds(0, 0, 177, 31);
+		AddProgram.add(mntmMangerPage);
 		UpdateProgram.add(btnScheduleUpdate);
+		
+		JMenuItem menuItem = new JMenuItem("Manger page");
+		menuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MangerPage mangerPage = new MangerPage();
+				mangerPage.setVisible(true);
+				dispose();
+			}
+		});
+		menuItem.setBounds(-7, 6, 177, 31);
+		UpdateProgram.add(menuItem);
 		DeleteProgram.add(btnScheduleDelete);
 
 		deleteProgramButton.addActionListener(new ActionListener() {
@@ -1083,6 +1111,17 @@ public class ProgramChange extends JFrame {
 			}
 		});
 		DeleteProgram.add(deleteProgramButton);
+		
+		JMenuItem menuItem_1 = new JMenuItem("Manger page");
+		menuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MangerPage mangerPage = new MangerPage();
+				mangerPage.setVisible(true);
+				dispose();
+			}
+		});
+		menuItem_1.setBounds(627, 0, 177, 31);
+		DeleteProgram.add(menuItem_1);
 
 		//TODO: LISTENERS
 
@@ -1238,7 +1277,8 @@ public class ProgramChange extends JFrame {
 			DefaultComboBoxModel<TvShow> tvModel = new DefaultComboBoxModel<TvShow>(tv);
 			deleteProgramComboBox.setModel(tvModel);
 		}
+	
+		
 
 	}
-
 }

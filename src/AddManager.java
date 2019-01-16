@@ -12,6 +12,9 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.awt.event.ActionEvent;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class AddManager extends JFrame {
 
@@ -94,5 +97,22 @@ public class AddManager extends JFrame {
 		});
 		btnAddManger.setBounds(141, 173, 140, 33);
 		contentPane.add(btnAddManger);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 378, 31);
+		contentPane.add(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("menu");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmAdminPage = new JMenuItem("Admin page");
+		mntmAdminPage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				AdminPage adminPage = new AdminPage();
+				adminPage.setVisible(true);
+				dispose();
+			}
+		});
+		mnNewMenu.add(mntmAdminPage);
 	}
 }

@@ -24,6 +24,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.time.DayOfWeek;
 import javax.swing.JButton;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class SchedulePage extends JFrame {
 
@@ -70,7 +73,7 @@ public class SchedulePage extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		JLabel lblEnterTheDay = new JLabel("Pick specific day:");
-		lblEnterTheDay.setBounds(114, 16, 127, 30);
+		lblEnterTheDay.setBounds(141, 31, 127, 30);
 		contentPane.add(lblEnterTheDay);
 
 
@@ -79,12 +82,12 @@ public class SchedulePage extends JFrame {
 
 		spinner.setModel(new DefaultComboBoxModel(DaysOfTheWeek.values()));
 		spinner.setSelectedIndex(0);
-		spinner.setBounds(253, 17, 168, 30);
+		spinner.setBounds(280, 32, 168, 30);
 		contentPane.add(spinner);
 		Vector row = new Vector<>();
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(43, 62, 830, 584);
+		scrollPane.setBounds(15, 78, 830, 584);
 		contentPane.add(scrollPane);
 
 		table = new JTable();
@@ -93,7 +96,7 @@ public class SchedulePage extends JFrame {
 		table.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 
 		JButton btnFullWeek = new JButton("Full Week");
-		btnFullWeek.setBounds(466, 12, 117, 40);
+		btnFullWeek.setBounds(493, 27, 117, 40);
 		contentPane.add(btnFullWeek);
 
 		DefaultTableModel model = new DefaultTableModel(
@@ -130,6 +133,23 @@ public class SchedulePage extends JFrame {
 
 		table.setEnabled(false);
 		table.setModel(model);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 378, 31);
+		contentPane.add(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("menu");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmLogout = new JMenuItem("logOut");
+		mntmLogout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MyAPP myAPP = new MyAPP();
+				myAPP.getFrame().setVisible(true);
+				dispose();
+			}
+		});
+		mnNewMenu.add(mntmLogout);
 
 		spinner.addActionListener(new ActionListener() {
 
