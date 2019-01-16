@@ -13,6 +13,9 @@ import javax.swing.JScrollPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class ProgramCostFrame extends JFrame {
 
@@ -83,6 +86,23 @@ public class ProgramCostFrame extends JFrame {
 		scrollPane.setViewportView(costFR);
 		costFR.setEditable(false);
 		costFR.setColumns(10);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 139, 31);
+		panel.add(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("menu");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmAdminPage = new JMenuItem("Admin page");
+		mntmAdminPage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AdminPage adminPage = new AdminPage();
+				adminPage.setVisible(true);
+				dispose();
+			}
+		});
+		mnNewMenu.add(mntmAdminPage);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				costFR.setText(Schedule.costShow(Integer.valueOf(textField.getText())));
